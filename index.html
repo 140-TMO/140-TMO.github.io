@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMO Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="reference-banner">FOR REFERENCE USE ONLY</div>
+    
+<div class="container">
+    <main>
+        <h1>TMO</h1>
+
+        <!-- Search Section -->
+        <div class="search-container">
+            <div class="search-input-container">
+                <input type="text" id="searchBox" placeholder="Search...">
+                <button onclick="search()" class="search-button">Search</button>
+            </div>
+            <div id="searchResults" class="search-results"></div>
+        </div>
+        
+<div id="zuluTimeClock">ZULU Time: </div>
+<div id="julianDate">Julian Date: </div>
+        
+    </main>
+</div>
+
+<script src="Zulu-Julian-utility.js"></script>
+    
+  
+<script>
+  fetch("/automation/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>
